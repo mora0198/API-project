@@ -6,30 +6,60 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
+
 <body>
     <main>
-        <header >
-            <img id="back-button" alt="Back Button" title="Back"/>
-            <img id="search-button" alt="Search" title="Search"/>
+        <button id="modalButton"> search Tv or Movie</button>
+        <div class="overlay hide">&nbsp;</div>
+
+        <div class="modal off">
+            <div class="modal-header">
+                <h2>Would you like to search Tv or Movie</h2>
+            </div>
+            <div class="modal-radio">
+                <input type="radio" name="movie-data" value="Tv" id="tv" checked>
+                <label for="Tv">Tv</label>
+
+                <input type="radio" name="movie-data" value="Movie" id="movie" checked>
+                <label for="Movie">Movie</label>
+
+            </div>
+            <button class="cancelButton">Cancel</button>
+            <button class="saveButton">Save</button>
+
+        </div>
+        <h1>Recommendation search</h1>
+        <header>
+
+            <img data-src="img/arrow-left-fill-large-angled-lg.svg" id="back-button" alt="Back Button" title="Back" class="iconic iconic-md" />
+
             <input type="text" id="search-input" placeholder="search" />
+
+            <div class="searchButtonDiv">
+                <img data-src="img/magnifying-glass.svg" id="search-button" ; alt="Search" title="Search" class="iconic iconic-md" />
+            </div>
         </header>
-        
+
         <div class="page" id="search-results">
             <section class="title"></section>
-            <section class="content"></section>
+            <section class="content flex-container"></section>
         </div>
-        
+
         <div class="page" id="recommend-results">
             <section class="title"></section>
-            <section class="content"></section>
+            <section class="content flex-container"></section>
         </div>
+
     </main>
- 
-    
+
+    <footer>
+        <img src="img/tmdb.png" alt="The movie database logo" />
+
+    </footer>
     <div class="attribution">
-       
+
     </div>
-    
+
     <script src="js/iconic.min.js"></script>
     <script src="js/key.js"></script>
     <script src="js/main.js"></script>

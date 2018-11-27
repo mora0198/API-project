@@ -1,3 +1,317 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Noto+Sans+SC|Raleway');
+
+* {
+    padding: 0;
+    margin: 2;
+}
+
+html {
+    background-color: dimgrey;
+}
+
+/* model */
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    width: 500px;
+    height: 280px;
+    z-index: 200;
+    top: calc((100% - 280px)/2);
+    left: calc((100% - 500px)/2);
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: #555;
+    background-color: #eee;
+}
+
+/* use these class names to show or hide the overlay and modal window */
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.off {
+    transform: translateY(-400%);
+}
+
+.on {
+    transform: translateY(0);
+}
+
+.cancelButton,
+.saveButton {
+    width: 120px;
+    position: absolute;
+    border: none;
+    background-color: aquamarine;
+    color: black;
+    cursor: pointer;
+    padding: 0.25rem 2rem;
+    font-size: 1rem;
+}
+
+.saveButton {
+    bottom: 1rem;
+    right: 4rem;
+}
+
+.cancelButton {
+    bottom: 1rem;
+    left: 4rem;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+}
+
+.modal-radio {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#modalButton {
+    background-color: aquamarine;
+    border-color: aquamarine;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+
+}
+
+h1 {
+    font-family: Noto+Sans+SC, serif;
+    color: aquamarine;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    border-bottom: 3px solid black;
+}
+
+#modalButton:hover {
+    cursor: pointer;
+}
+
+#back-button {
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    padding-right: 10px;
+}
+#back-button:hover {
+    -ms-transform: scale(1.3);
+    /* IE 9 */
+    -webkit-transform: scale(1.3);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+#search-input {
+    width 100%;
+    height: auto;
+}
+
+#search-input:hover {
+    padding: 10px;
+    padding-top: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#search-button {
+    height: 2rem;
+    width: 3rem;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+#search-button:hover {
+
+    -ms-transform: scale(1.3);
+    /* IE 9 */
+    -webkit-transform: scale(1.3);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.iconic-property-stroke,
+.iconic-property-fill {
+    fill: aquamarine;
+    stroke: mediumaquamarine;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+footer > img {
+    padding-bottom: 1rem;
+    align-content: center;
+    max-width: 30%;
+    height: 100px;
+    width: 150px;
+}
+
+/*Add this class to the recommend and search results content sections in HTML*/
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.movieCard {
+    width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    background-color: aquamarine;
+    color: black;
+    font-size: 12px;
+    font-family: Merriweather, Poppins, Arial, sans-serif;
+}
+
+.movieCard:hover {
+    background-color: mediumaquamarine;
+    cursor: pointer;
+    font-size: 15px;
+    -ms-transform: scale(0.6);
+    /* IE 9 */
+    -webkit-transform: scale(0.6);
+    /* Safari 3-8 */
+    transform: scale(1.0);
+}
+
+.tvCard {
+    width: 50rem;
+    height: auto;
+    margin: 1rem auto;
+    background-color: aquamarine;
+    color: black;
+    font-size: 12px;
+    font-family: Merriweather, Poppins, Arial, sans-serif;
+}
+
+.tvCard:hover {
+    background-color: mediumaquamarine;
+    cursor: pointer;
+    font-size: 15px;
+    -ms-transform: scale(0.6);
+    /* IE 9 */
+    -webkit-transform: scale(0.6);
+    /* Safari 3-8 */
+    transform: scale(1.0);
+}
+
+.videoTitle {
+    font-size: 20px;
+    font-family: Noto+Sans+SC, Poppins, Arial, serif;
+    padding-top: 1rem;
+}
 
 
+.imageSection {
+    float: left;
+    width: 12rem;
+    height: 17rem;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+#search-results{
+    color: aquamarine;
+}
 
+/*select only the images that are direct descendants of .imageSection*/
+.imageSection > img {
+    height: 17rem;
+    margin-right: 1rem;
+}
+
+
+@media (min-width: 600px) and (max-width:900px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .tvCard:hover {
+        -ms-transform: scale(0.6);
+        /* IE 9 */
+        -webkit-transform: scale(0.6);
+        /* Safari 3-8 */
+        transform: scale(1.04);
+    }
+
+    .movieCard:hover {
+
+        -ms-transform: scale(0.6);
+        /* IE 9 */
+        -webkit-transform: scale(0.6);
+        /* Safari 3-8 */
+        transform: scale(1.06);
+    }
+
+    .videoTitle {
+        font-size: 25px;
+
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .movieCard {
+        display: block;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    .movieCard:hover {
+        -ms-transform: scale(0.6);
+        /* IE 9 */
+        -webkit-transform: scale(0.6);
+        /* Safari 3-8 */
+        transform: scale(1.03);
+    }
+
+    .videoTitle {
+        font-size: 25px;
+    }
+
+    .tvCard {
+        display: block;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    .tvCard:hover {
+        -ms-transform: scale(0.6);
+        /* IE 9 */
+        -webkit-transform: scale(0.6);
+        /* Safari 3-8 */
+        transform: scale(1.03);
+    }
+
+}
