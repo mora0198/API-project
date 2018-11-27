@@ -276,7 +276,7 @@ footer > img {
 }
 
 
-@media (min-width: 600px) and (max-width:900px) {
+@media (min-width: 600px) and (max-width:999px) {
     h1 {
         font-size: 40px;
     }
@@ -306,6 +306,9 @@ footer > img {
 }
 
 @media (min-width: 1000px) {
+    h1{
+        font-size: 72px;
+    }
     .movieCard {
         display: block;
         justify-content: space-evenly;
@@ -338,5 +341,5 @@ footer > img {
         /* Safari 3-8 */
         transform: scale(1.03);
     }
-
+    
 }
