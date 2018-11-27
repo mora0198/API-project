@@ -68,9 +68,27 @@ html {
     right: 4rem;
 }
 
+.saveButton:hover {
+    -ms-transform: scale(1.3);
+    /* IE 9 */
+    -webkit-transform: scale(1.3);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+    background-color: mediumaquamarine;
+}
+
 .cancelButton {
     bottom: 1rem;
     left: 4rem;
+}
+
+.cancelButton:hover {
+    -ms-transform: scale(1.3);
+    /* IE 9 */
+    -webkit-transform: scale(1.3);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+    background-color: mediumaquamarine;
 }
 
 .modal-header {
