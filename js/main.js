@@ -8,7 +8,6 @@ let ZoeCode = (function () {
     const staleDataTimeOut = 3600;
     let mode = "movie";
 
-
     document.addEventListener("DOMContentLoaded", init);
 
     function init() {
@@ -320,7 +319,7 @@ let ZoeCode = (function () {
             let videoOverview = document.createElement("p");
 
             // set up the content
-            videoTitle.textContent = tv.title;
+            videoTitle.textContent = tv.name;
             videoDate.textContent = tv.release_date;
             videoRating.textContent = tv.vote_average;
             videoOverview.textContent = tv.overview;
@@ -328,7 +327,7 @@ let ZoeCode = (function () {
             image.src = `${imageURL}${imageSizes[2]}${tv.poster_path}`;
 
             // set up movie data attributes
-            tvCard.setAttribute("data-title", tv.title);
+            tvCard.setAttribute("data-name", tv.name);
             tvCard.setAttribute("data-id", tv.id);
 
             // set up class names
@@ -372,9 +371,9 @@ let ZoeCode = (function () {
 
     function getTvRecommendations() {
         //console.log(this);
-        let tvTitle = this.getAttribute("data-title");
+        let tvName = this.getAttribute("data-name");
         let tvID = this.getAttribute("data-id");
-        console.log("you clicked: " + tvTitle + "" + tvID);
+        console.log("you clicked: " + tvName + "" + tvID);
 
         let url = `${movieDataBaseURL}tv/${tvID}/recommendations?api_key=${APIKEY}&query=${searchString}`;
         fetch(url)

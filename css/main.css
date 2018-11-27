@@ -119,6 +119,7 @@ h1 {
     cursor: pointer;
     padding-right: 10px;
 }
+
 #back-button:hover {
     -ms-transform: scale(1.3);
     /* IE 9 */
@@ -161,6 +162,7 @@ h1 {
     stroke: mediumaquamarine;
 }
 
+
 footer {
     left: 0;
     bottom: 0;
@@ -186,13 +188,14 @@ footer > img {
 }
 
 .movieCard {
-    width: 100%;
+    width: 50rem;
     height: auto;
     margin: 1rem auto;
     background-color: aquamarine;
     color: black;
     font-size: 12px;
     font-family: Merriweather, Poppins, Arial, sans-serif;
+    border: 5px solid black;
 }
 
 .movieCard:hover {
@@ -214,6 +217,7 @@ footer > img {
     color: black;
     font-size: 12px;
     font-family: Merriweather, Poppins, Arial, sans-serif;
+    border: 5px solid black;
 }
 
 .tvCard:hover {
@@ -241,8 +245,10 @@ footer > img {
     margin-right: 1rem;
     overflow: hidden;
 }
-#search-results{
+
+#search-results {
     color: aquamarine;
+    text-align: center;
 }
 
 /*select only the images that are direct descendants of .imageSection*/
@@ -285,7 +291,7 @@ footer > img {
     .movieCard {
         display: block;
         justify-content: space-evenly;
-        width: 50%;
+        width: 65rem;
     }
 
     .movieCard:hover {
@@ -303,7 +309,8 @@ footer > img {
     .tvCard {
         display: block;
         justify-content: space-evenly;
-        width: 50%;
+        width: 65rem;
+
     }
 
     .tvCard:hover {
